@@ -1,0 +1,11 @@
+<div class="game">
+  <h3>{{ whoesRound.length > 1 ? whoesRound : "Turn: " + whoesRound }}</h3>
+  <div class="board">
+    <button [disabled]="gamePause" class="square {{el ? 'clicked' : null}}"
+     (click)="onSquareClick(i)" (mouseenter)="onMouseEnter($event)"
+     (mouseleave)="onMouseLeave($event)" *ngFor="let el of board; let i = index" >
+      <p>{{ el }}</p>
+    </button>
+  </div>
+  <button class="new-game" (click)="startNewGame()">Start new game</button>
+</div>

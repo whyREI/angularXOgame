@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.game {
+
+  h3 {
+    margin-left: 16px;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 400px;
+  height: 400px;
+}
+
+.square {
+  padding: none;
+  height: 32%;
+  width: 32%;
+
+  border: none;
+
+  background: rgba(255, 63, 63, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:not([disabled]):not(.clicked):hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    p {
+      color: grey;
+    }
+  }
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 8em;
+  }
+
+}
+
+.new-game {
+  font-family: "Montserrat", sans-serif;
+  width: 400px;
+  margin-top: 36px;
+  border: none;
+  font-size: 1.6em;
+  padding: 6px;
+  background: rgba(239, 255, 63, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+
+  &:hover {
+    box-shadow: 0 4px 30px rgba(87, 255, 78, 0.4);
+
+  }
+}
